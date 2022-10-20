@@ -11,11 +11,14 @@ others = ["@", "$", "%", "^", "&", "*", "(", ")", "_", "/", "?"]
 total = [English, capital, numbers, others]
 
 def Password_Generator():
+    passwd = ""
     password = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     for i in range(0, 16):
         if password[i] == 0:
             password[i] = random.choice(random.choice(total))
-    print(password)
+    for j in password:
+        passwd += j
+    print(passwd)
     
 
 Password_Generator()
